@@ -1,67 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="_BD8C9dL3t3A7qZ5tk-YLD_T2PtVnC2EbI6Emy5y6CE">
-    <title>Privacy Policy - Music Prompt Generator</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        .container {
-            background-color: #fff;
-            padding: 20px 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="google-site-verification" content="_BD8C9dL3t3A7qZ5tk-YLD_T2PtVnC2EbI6Emy5y6CE">  
+  <title>Privacy Policy | Music Prompt Generator</title>
+  <meta name="description" content="Privacy Policy for Music Prompt Generator by Oblivbloom" />
+  <style>
+    :root{
+      --bg: #ffffff;
+      --fg: #0f172a; /* slate-900 */
+      --muted: #475569; /* slate-600 */
+      --card: #0f172a; /* border */
+      --link: #1d4ed8; /* blue-700 */
+      --accent: #111827; /* gray-900 */
+      --radius: 16px;
+      --maxw: 860px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg: #0b1220;
+        --fg: #e5e7eb;
+        --muted: #9ca3af;
+        --card: #1f2937;
+        --link: #60a5fa;
+        --accent: #111827;
+      }
+      body{background-image: radial-gradient(800px 600px at 10% 0%, rgba(59,130,246,0.06), transparent),
+                                 radial-gradient(600px 500px at 90% -10%, rgba(236,72,153,0.05), transparent);
+      }
+    }
+    html, body { height: 100%; }
+    body{
+      margin:0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.65;
+      letter-spacing: 0.01em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .container{
+      max-width: var(--maxw);
+      margin: 48px auto;
+      padding: 0 20px 64px;
+    }
+    header{
+      position: sticky;
+      top: 0;
+      backdrop-filter: saturate(180%) blur(10px);
+      background: color-mix(in srgb, var(--bg) 80%, transparent);
+      border-bottom: 1px solid color-mix(in srgb, var(--card) 20%, transparent);
+      z-index: 10;
+    }
+    .header-inner{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 16px 20px;
+      display:flex; align-items:center; justify-content:space-between;
+      gap: 12px;
+    }
+    .brand{ font-weight: 800; letter-spacing: 0.02em; font-size: 18px; }
+    .title{
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.2;
+      margin: 10px 0 8px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .subtitle{ color: var(--muted); font-size: 16px; }
+    .card{
+      background: color-mix(in srgb, var(--bg) 92%, #ffffff 8%);
+      border: 1px solid color-mix(in srgb, var(--card) 16%, transparent);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+    h2{
+      font-size: clamp(22px, 3.2vw, 28px);
+      margin: 28px 0 12px;
+      line-height: 1.25;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+    h3{
+      font-size: 18px;
+      margin: 18px 0 8px;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+    p{ margin: 10px 0; }
+    ul{ margin: 10px 0 10px 1.2rem; padding:0; }
+    li{ margin: 6px 0; }
+    a{ color: var(--link); text-decoration: none; }
+    a:hover, a:focus{ text-decoration: underline; }
+    .meta{ color: var(--muted); font-size: 14px; }
+    .toc{
+      display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin: 12px 0 4px;
+    }
+    .toc a{
+      display:block; padding: 10px 12px; border:1px solid color-mix(in srgb, var(--card) 16%, transparent);
+      border-radius: 12px; background: color-mix(in srgb, var(--bg) 96%, #ffffff 4%);
+    }
+    .footer{ margin-top: 36px; color: var(--muted); font-size: 14px; }
+    .badge{ display:inline-block; padding: 4px 10px; border-radius: 999px; border:1px solid color-mix(in srgb, var(--card) 16%, transparent); font-size:12px; color:var(--muted); }
+    code.kbd{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background: color-mix(in srgb, var(--bg) 92%, #000 8%); padding: 2px 6px; border-radius: 6px; font-size: 13px; }
+    @media print{
+      header{ position: static; backdrop-filter:none; background:transparent; border:0; }
+      .container{ margin:0; padding:0; max-width: none; }
+      a{ color: black; text-decoration: none; }
+      .toc{ display:none; }
+      .card{ box-shadow:none; border-color:#ccc; }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <div class="header-inner">
+      <div class="brand">Oblivbloom</div>
+      <div class="badge">Privacy Policy</div>
+    </div>
+  </header>
 
-    <div class="container">
-        <h1>Privacy Policy for Music Prompt Generator</h1>
-        <p><strong>Last Updated:</strong> August 13, 2025</p>
+  <div class="container">
+    <div class="card">
+      <h1 class="title">Privacy Policy for Music Prompt Generator</h1>
+      <p class="meta"><strong>Last Updated:</strong> September 3, 2025</p>
+      <p class="subtitle">This Privacy Policy describes how Oblivbloom ("we", "us", or "our") collects, uses, and handles your information when you use our Music Prompt Generator application (the "App").</p>
 
-        <p>Developed by Oblivbloom ("we", "us", "our"). This Privacy Policy describes how we collect, use, and handle your information when you use our application ("App").</p>
+      <h2>Table of Contents</h2>
+      <nav class="toc">
+        <a href="#info-we-collect">1. Information We Collect</a>
+        <a href="#how-we-use">2. How We Use Your Information</a>
+        <a href="#sharing">3. Data Sharing and Disclosure</a>
+        <a href="#retention">4. Data Retention</a>
+        <a href="#security">5. Security</a>
+        <a href="#your-rights">6. Your Rights</a>
+        <a href="#contact">7. Contact Us</a>
+      </nav>
 
+      <section id="info-we-collect">
         <h2>1. Information We Collect</h2>
+        <p>To provide and improve the App, we collect the following types of information:</p>
+
+        <h3>a) Information You Provide to Us</h3>
         <ul>
-            <li><strong>Account Information:</strong> When you create an account, we collect your email address through Firebase Authentication.</li>
-            <li><strong>User Content:</strong> We store the prompt options you create and the prompts you save in your personal account on Firebase Firestore.</li>
-            <li><strong>Gemini API Key:</strong> Your personal Gemini API key is stored locally on your device using shared_preferences. It is never sent to our servers.</li>
+          <li><strong>Account Information:</strong> When you create an account, we collect your Email Address, a Nickname you provide, and a unique User ID automatically generated by our authentication service (Firebase Authentication).</li>
+          <li><strong>User Content:</strong> We collect and store the content you create, including prompts you save to your personal account ("Saved Prompts") and content you post publicly, such as shared prompts and comments in the community feature ("Community Content"). Community Content is visible to other users of the App.</li>
         </ul>
 
+        <h3>b) Information Collected Automatically</h3>
+        <ul>
+          <li><strong>Crash Logs and Diagnostics:</strong> To maintain and improve the stability of our App, we may automatically collect de-identified crash logs and diagnostic data.</li>
+        </ul>
+
+        <h3>c) Information We May Collect in the Future</h3>
+        <ul>
+          <li><strong>Device and Advertising IDs:</strong> If we introduce advertisements in the future, our third-party ad partners (such as Google AdMob) may collect device identifiers or your advertising ID (e.g., ADID) to serve personalized ads.</li>
+        </ul>
+
+        <h3>d) Information Stored Locally on Your Device</h3>
+        <ul>
+          <li><strong>Gemini API Key:</strong> Your personal Google Gemini API key is stored locally on your device using <code class="kbd">shared_preferences</code>. It is never sent to or stored on our servers.</li>
+        </ul>
+      </section>
+
+      <section id="how-we-use">
         <h2>2. How We Use Your Information</h2>
         <ul>
-            <li>To provide, maintain, and improve the App.</li>
-            <li>To manage your account and provide you with customer support.</li>
-            <li>To personalize your experience.</li>
+          <li>Provide and maintain the App’s core features</li>
+          <li>Store and sync your Saved Prompts</li>
+          <li>Display Community Content to other users</li>
+          <li>Improve stability and performance through crash analytics</li>
+          <li>(If ads are introduced) Serve relevant advertisements</li>
         </ul>
+      </section>
 
-        <h2>3. Data Storage and Security</h2>
-        <p>We use Firebase services (Authentication, Firestore) provided by Google to store your account information and user content securely. Your personal Gemini API key is stored only on your device and is not accessible by us.</p>
+      <section id="sharing">
+        <h2>3. Data Sharing and Disclosure</h2>
+        <p>We do <strong>not</strong> sell your personal information. We may share information only in the following circumstances:</p>
+        <ul>
+          <li><strong>Service Providers:</strong> With trusted third-party providers (e.g., Firebase) who help us deliver core functionality.</li>
+          <li><strong>Legal Requirements:</strong> When required by law or to respond to lawful requests from authorities.</li>
+          <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets.</li>
+        </ul>
+      </section>
 
-        <h2>4. Information Sharing</h2>
-        <p>We do not share your personal information with third parties, except as required by law.</p>
+      <section id="retention">
+        <h2>4. Data Retention</h2>
+        <ul>
+          <li>Account information and Saved Prompts are retained as long as your account is active.</li>
+          <li>You can request deletion of your account and associated data at any time by contacting us (see <a href="#contact">Section 7</a>).</li>
+          <li>Crash logs and diagnostic data may be stored for up to 12 months for performance monitoring.</li>
+        </ul>
+      </section>
 
-        <h2>5. Your Rights</h2>
-        <p>You have the right to access, update, or delete your personal information. You can manage your saved prompts within the App. To delete your account, please contact us.</p>
+      <section id="security">
+        <h2>5. Security</h2>
+        <p>We take reasonable measures to protect your information from unauthorized access, use, or disclosure. However, no method of transmission over the internet or method of electronic storage is 100% secure.</p>
+      </section>
 
-        <h2>6. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at: <strong>[oblivbloom@gmail.com]</strong></p>
+      <section id="your-rights">
+        <h2>6. Your Rights</h2>
+        <p>Depending on your jurisdiction, you may have the right to:</p>
+        <ul>
+          <li>Access and receive a copy of the information we hold about you</li>
+          <li>Request corrections to inaccurate data</li>
+          <li>Request deletion of your account and associated information</li>
+          <li>Opt out of future personalized advertising (if introduced)</li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>7. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy or wish to exercise your rights, you can contact us at:</p>
+        <p><strong>Oblivbloom</strong><br/>
+           Email: <a href="mailto:support@oblivbloom.com">support@oblivbloom.com</a>
+        </p>
+        <!-- TODO: Replace with your official contact email if different. -->
+      </section>
+
+      <p class="footer">© <span id="year"></span> Oblivbloom. All rights reserved.</p>
     </div>
+  </div>
 
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-
 </html>
-
-
