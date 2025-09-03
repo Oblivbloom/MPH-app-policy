@@ -1,58 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - Music Prompt Generator</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        .container {
-            background-color: #fff;
-            padding: 20px 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms of Service | Music Prompt Generator</title>
+  <style>
+    :root{
+      --bg: #ffffff;
+      --fg: #0f172a;
+      --muted: #475569;
+      --card: #0f172a;
+      --link: #1d4ed8;
+      --radius: 16px;
+      --maxw: 860px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg: #0b1220;
+        --fg: #e5e7eb;
+        --muted: #9ca3af;
+        --card: #1f2937;
+        --link: #60a5fa;
+      }
+    }
+    body{
+      margin:0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container{
+      max-width: var(--maxw);
+      margin: 48px auto;
+      padding: 0 20px 64px;
+    }
+    header{
+      position: sticky;
+      top: 0;
+      backdrop-filter: saturate(180%) blur(10px);
+      background: color-mix(in srgb, var(--bg) 80%, transparent);
+      border-bottom: 1px solid color-mix(in srgb, var(--card) 20%, transparent);
+      z-index: 10;
+    }
+    .header-inner{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 16px 20px;
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .brand{ font-weight: 800; font-size: 18px; }
+    .title{
+      font-size: clamp(28px, 4vw, 40px);
+      margin: 10px 0 8px;
+      font-weight: 800;
+    }
+    .subtitle{ color: var(--muted); font-size: 16px; }
+    .card{
+      background: color-mix(in srgb, var(--bg) 92%, #ffffff 8%);
+      border: 1px solid color-mix(in srgb, var(--card) 16%, transparent);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+    h2{
+      font-size: clamp(22px, 3.2vw, 28px);
+      margin: 28px 0 12px;
+      font-weight: 800;
+    }
+    h3{ font-size: 18px; margin: 18px 0 8px; font-weight: 700; }
+    p{ margin: 10px 0; }
+    ul{ margin: 10px 0 10px 1.2rem; }
+    a{ color: var(--link); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+    .meta{ color: var(--muted); font-size: 14px; }
+    .toc{ display:grid; gap:8px; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); margin: 12px 0 4px; }
+    .toc a{ display:block; padding:10px 12px; border:1px solid color-mix(in srgb, var(--card) 16%, transparent); border-radius:12px; background: color-mix(in srgb, var(--bg) 96%, #ffffff 4%); }
+    .footer{ margin-top: 36px; color: var(--muted); font-size: 14px; }
+  </style>
 </head>
 <body>
-
-    <div class="container">
-        <h1>Terms of Service for Music Prompt Generator</h1>
-        <p><strong>Last Updated:</strong> August 13, 2025</p>
-
-        <p>By downloading and using Music Prompt Generator ("App"), you agree to these terms.</p>
-
-        <h2>1. Accounts</h2>
-        <p>You are responsible for safeguarding your account and your personal Gemini API key. You agree not to disclose your password to any third party.</p>
-
-        <h2>2. User Content</h2>
-        <p>You are solely responsible for the prompts and other content you create and save within the App. We do not claim ownership of your content.</p>
-
-        <h2>3. Prohibited Use</h2>
-        <p>You agree not to use the App for any unlawful purpose or to violate any laws in your jurisdiction.</p>
-
-        <h2>4. Termination</h2>
-        <p>We may terminate or suspend your account at our sole discretion, without prior notice, for conduct that we believe violates these Terms.</p>
-
-        <h2>5. Disclaimers</h2>
-        <p>The App is provided "AS IS", without warranty of any kind. We do not warrant that the App will meet your requirements or be available on an uninterrupted, secure, or error-free basis.</p>
-
-        <h2>6. Contact Us</h2>
-        <p>If you have any questions about these Terms, please contact us at: <strong>oblivbloom@gmail.com</strong></p>
+  <header>
+    <div class="header-inner">
+      <div class="brand">Oblivbloom</div>
+      <div class="meta">Terms of Service</div>
     </div>
+  </header>
 
+  <div class="container">
+    <div class="card">
+      <h1 class="title">Terms of Service for Music Prompt Generator</h1>
+      <p class="meta"><strong>Last Updated:</strong> September 3, 2025</p>
+      <p class="subtitle">By downloading or using the Music Prompt Generator application (the "App"), you agree to be bound by these Terms of Service ("Terms").</p>
+
+      <h2>Table of Contents</h2>
+      <nav class="toc">
+        <a href="#accounts">1. Accounts</a>
+        <a href="#ugc">2. User-Generated Content</a>
+        <a href="#prohibited">3. Prohibited Use</a>
+        <a href="#termination">4. Termination</a>
+        <a href="#disclaimer">5. Disclaimers & Liability</a>
+        <a href="#contact">6. Contact Us</a>
+      </nav>
+
+      <section id="accounts">
+        <h2>1. Accounts</h2>
+        <p>You are responsible for safeguarding your account information. You agree to provide accurate and complete information when creating an account and to keep this information up to date. You are responsible for all activities that occur under your account.</p>
+      </section>
+
+      <section id="ugc">
+        <h2>2. User-Generated Content</h2>
+        <h3>a) Your Responsibility</h3>
+        <p>You are solely responsible for any content you create, save, or post within the App, including saved prompts, shared prompts, and comments ("User Content"). You agree not to post User Content that is unlawful, offensive, or violates the rights of others.</p>
+
+        <h3>b) License You Grant Us</h3>
+        <p>By posting User Content to the public areas of the App (such as the community feature), you grant us a non-exclusive, worldwide, royalty-free license to use, display, reproduce, and distribute your User Content in connection with operating and promoting the App.</p>
+
+        <h3>c) Content Moderation</h3>
+        <p>We do not pre-screen User Content, but we reserve the right, in our sole discretion, to remove or disable access to any User Content that we believe violates these Terms or is otherwise harmful.</p>
+      </section>
+
+      <section id="prohibited">
+        <h2>3. Prohibited Use</h2>
+        <p>You agree not to use the App for any unlawful purpose, to solicit others to perform or participate in any unlawful acts, or to harass, abuse, or harm another person.</p>
+      </section>
+
+      <section id="termination">
+        <h2>4. Termination</h2>
+        <p>We may terminate or suspend your account and bar access to the App immediately, without prior notice or liability, for any reason whatsoever, including but not limited to a breach of these Terms. Examples of conduct that may lead to termination include posting inappropriate content, spamming, or harassment of other users.</p>
+      </section>
+
+      <section id="disclaimer">
+        <h2>5. Disclaimers and Limitation of Liability</h2>
+        <p>The App is provided on an "AS IS" and "AS AVAILABLE" basis. Your use of the App is at your sole risk. We do not warrant that the App will be uninterrupted, secure, or error-free. In no event shall Oblivbloom be liable for any indirect, incidental, special, consequential or punitive damages arising out of or in connection with your use of the App.</p>
+      </section>
+
+      <section id="contact">
+        <h2>6. Contact Us</h2>
+        <p>If you have any questions about these Terms, please contact us at:</p>
+        <p><strong>Oblivbloom</strong><br/>
+        Email: <a href="mailto:oblivbloom@gmail.com">oblivbloom@gmail.com</a></p>
+      </section>
+
+      <p class="footer">© <span id="year"></span> Oblivbloom. All rights reserved.</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-
 </html>
-
-
